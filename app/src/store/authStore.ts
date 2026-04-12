@@ -1,0 +1,87 @@
+import { create } from 'zustand';
+import { persist } from 'zustand/middleware';
+import type { User } from '@/types';
+
+interface AuthState {
+  user: User | null;
+  isAuthenticated: boolean;
+  isLoading: boolean;
+  login: (email: string, password: string) => Promise<boolean>;
+  logout: () => void;
+  setUser: (user: User | null) => void;
+}
+
+// Mock users for demo
+const mockUsers: Record<string, User & { password: string }> = {
+  'student@cmind.com': {
+    id: '1',
+    name: 'Ahmed Hassan',
+    email: 'student@cmind.com',
+    password: 'student123',
+    role: 'student',
+    schoolId: 'school1',
+    groupId: 'group1',
+    avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=Ahmed'
+  },
+  'teacher@cmind.com': {
+    id: '2',
+    name: 'Ms. Sarah Johnson',
+    email: 'teacher@cmind.com',
+    password: 'teacher123',
+    role: 'teacher',
+    schoolId: 'school1',
+    avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=Sarah'
+  },
+  'admin@cmind.com': {
+    id: '3',
+    name: 'Mr. Administrator',
+    email: 'admin@cmind.com',
+    password: 'admin123',
+    role: 'admin',
+    schoolId: 'school1',
+    avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=Admin'
+  }
+};
+
+export const useAuthStore = create<AuthState>()(
+  persist(
+    (set) => ({
+      user: null,
+      isAuthenticated: false,
+      isLoading: false,
+
+      login: async (email: string, password: string) => {
+        set({ isLoading: true });
+        
+        // Simulate API call
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        
+        const mockUser = mockUsers[email.toLowerCase()];
+        
+        if (mockUser && mockUser.password === password) {
+          const { password: _, ...userWithoutPassword } = mockUser;
+          set({ 
+            user: userWithoutPassword, 
+            isAuthenticated: true,
+            isLoading: false 
+          });
+          return true;
+        }
+        
+        set({ isLoading: false });
+        return false;
+      },
+
+      logout: () => {
+        set({ user: null, isAuthenticated: false });
+      },
+
+      setUser: (user) => {
+        set({ user, isAuthenticated: !!user });
+      }
+    }),
+    {
+      name: 'cmind-auth-storage'
+    }
+  )
+);
