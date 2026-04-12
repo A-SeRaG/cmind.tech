@@ -13,29 +13,29 @@ interface AuthState {
 
 // Mock users for demo
 const mockUsers: Record<string, User & { password: string }> = {
-  'student@cmind.com': {
+  'student@cmind.tech': {
     id: '1',
-    name: 'Ahmed Hassan',
-    email: 'student@cmind.com',
+    name: 'Ahmed Serag',
+    email: 'student@cmind.tech',
     password: 'student123',
     role: 'student',
     schoolId: 'school1',
     groupId: 'group1',
     avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=Ahmed'
   },
-  'teacher@cmind.com': {
+  'teacher@cmind.tech': {
     id: '2',
-    name: 'Ms. Sarah Johnson',
-    email: 'teacher@cmind.com',
+    name: 'Ms. Saber Mohammed',
+    email: 'teacher@cmind.tech',
     password: 'teacher123',
     role: 'teacher',
     schoolId: 'school1',
-    avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=Sarah'
+    avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=Saber'
   },
-  'admin@cmind.com': {
+  'admin@cmind.tech': {
     id: '3',
     name: 'Mr. Administrator',
-    email: 'admin@cmind.com',
+    email: 'admin@cmind.tech',
     password: 'admin123',
     role: 'admin',
     schoolId: 'school1',

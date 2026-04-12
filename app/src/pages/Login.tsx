@@ -29,13 +29,13 @@ export function Login() {
     setActiveTab(value);
     setError('');
     if (value === 'student') {
-      setEmail('student@cmind.com');
+      setEmail('student@cmind.tech');
       setPassword('student123');
     } else if (value === 'teacher') {
-      setEmail('teacher@cmind.com');
+      setEmail('teacher@cmind.tech');
       setPassword('teacher123');
     } else if (value === 'admin') {
-      setEmail('admin@cmind.com');
+      setEmail('admin@cmind.tech');
       setPassword('admin123');
     }
   };
@@ -133,9 +133,9 @@ export function Login() {
             <div className="mt-6 p-4 bg-muted rounded-lg text-sm">
               <p className="font-medium mb-2">Demo Credentials:</p>
               <div className="space-y-1 text-muted-foreground">
-                <p><strong>Student:</strong> student@cmind.com / student123</p>
-                <p><strong>Teacher:</strong> teacher@cmind.com / teacher123</p>
-                <p><strong>Admin:</strong> admin@cmind.com / admin123</p>
+                <p><strong>Student:</strong> student@cmind.tech / student123</p>
+                <p><strong>Teacher:</strong> teacher@cmind.tech / teacher123</p>
+                <p><strong>Admin:</strong> admin@cmind.tech / admin123</p>
               </div>
             </div>
           </CardContent>

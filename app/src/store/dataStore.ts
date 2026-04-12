@@ -116,7 +116,7 @@ const mockNews: NewsItem[] = [
     title: 'New Library Books Available',
     body: 'We have added 500 new books to our school library. Come and explore the new collection!',
     authorId: '2',
-    authorName: 'Ms. Sarah Johnson',
+    authorName: 'Ms. Saber Mohammed',
     publishedAt: '2026-04-13T14:00:00'
   }
 ];
@@ -126,7 +126,7 @@ const mockMessages: ChatMessage[] = [
     id: '1',
     groupId: 'group1',
     senderId: '2',
-    senderName: 'Ms. Sarah Johnson',
+    senderName: 'Ms. Saber Mohammed',
     senderRole: 'teacher',
     message: 'Hello everyone! Don\'t forget about the math quiz tomorrow.',
     sentAt: '2026-04-13T09:00:00'
@@ -135,16 +135,16 @@ const mockMessages: ChatMessage[] = [
     id: '2',
     groupId: 'group1',
     senderId: '1',
-    senderName: 'Ahmed Hassan',
+    senderName: 'Ahmed Serag ',
     senderRole: 'student',
-    message: 'Thank you for the reminder, Ms. Johnson!',
+    message: 'Thank you for the reminder, Ms. Saber!',
     sentAt: '2026-04-13T09:15:00'
   },
   {
     id: '3',
     groupId: 'group1',
     senderId: '2',
-    senderName: 'Ms. Sarah Johnson',
+    senderName: 'Ms. Saber Mohammed',
     senderRole: 'teacher',
     message: 'You\'re welcome! Good luck with your preparation.',
     sentAt: '2026-04-13T09:20:00'
@@ -156,7 +156,7 @@ const mockSubmissions: Submission[] = [
     id: '1',
     assignmentId: '1',
     studentId: '1',
-    studentName: 'Ahmed Hassan',
+    studentName: 'Ahmed Serag ',
     submittedAt: '2026-04-19T15:30:00',
     score: 85,
     status: 'graded'
@@ -165,7 +165,7 @@ const mockSubmissions: Submission[] = [
     id: '2',
     assignmentId: '2',
     studentId: '1',
-    studentName: 'Ahmed Hassan',
+    studentName: 'Ahmed Serag ',
     submittedAt: '2026-04-24T10:00:00',
     status: 'pending'
   }
@@ -174,8 +174,8 @@ const mockSubmissions: Submission[] = [
 const mockUsers: User[] = [
   {
     id: '1',
-    name: 'Ahmed Hassan',
-    email: 'student@cmind.com',
+    name: 'Ahmed Serag',
+    email: 'student@cmind.tech',
     role: 'student',
     schoolId: 'school1',
     groupId: 'group1',
@@ -183,16 +183,16 @@ const mockUsers: User[] = [
   },
   {
     id: '2',
-    name: 'Ms. Sarah Johnson',
-    email: 'teacher@cmind.com',
+    name: 'Ms. Saber Mohammed',
+    email: 'teacher@cmind.tech',
     role: 'teacher',
     schoolId: 'school1',
-    avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=Sarah'
+    avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=Saber'
   },
   {
     id: '3',
     name: 'Mr. Administrator',
-    email: 'admin@cmind.com',
+    email: 'admin@cmind.tech',
     role: 'admin',
     schoolId: 'school1',
     avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=Admin'
