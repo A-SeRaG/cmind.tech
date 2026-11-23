@@ -1,0 +1,13 @@
+{
+  "name": "cmind-lms",
+  "private": true,
+  "workspaces": ["apps/*", "packages/*"],
+  "scripts": {
+    "dev:web": "npm run dev -w apps/web",
+    "dev:api": "npm run dev -w apps/api",
+    "build": "npm run build -w packages/shared && npm run build -w apps/web && npm run build -w apps/api",
+    "typecheck": "npm run typecheck -w packages/shared && npm run typecheck -w apps/api && npx -w apps/web tsc -b",
+    "test": "npm run test -w packages/shared && npm run test -w apps/api"
+  },
+  "engines": { "node": ">=20" }
+}
