@@ -1,0 +1,15 @@
+{
+  "name": "@cmind/db",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --import tsx --test --test-concurrency=1 integration/*.test.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^22.7.0",
+    "@types/pg": "^8.11.10",
+    "pg": "^8.13.0",
+    "tsx": "^4.19.0"
+  }
+}
